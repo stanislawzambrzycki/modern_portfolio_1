@@ -1,3 +1,59 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 25px;
+  cursor: pointer;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.menu-btn .btn-line:nth-child(1) {
+  width: 30px;
+  height: 5px;
+  margin: 0 0 5px 0;
+  background-color: white;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.menu-btn .btn-line:nth-child(2) {
+  width: 30px;
+  height: 5px;
+  margin: 0 0 5px 0;
+  background-color: white;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.menu-btn .btn-line:nth-child(3) {
+  width: 30px;
+  height: 5px;
+  margin: 0;
+  background-color: white;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.menu-btn.close {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.menu-btn.close .btn-line:nth-child(1) {
+  -webkit-transform: translate(0px, 12px) rotate(-45deg);
+          transform: translate(0px, 12px) rotate(-45deg);
+}
+
+.menu-btn.close .btn-line:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-btn.close .btn-line:nth-child(3) {
+  -webkit-transform: translate(0px, -8px) rotate(45deg);
+          transform: translate(0px, -8px) rotate(45deg);
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

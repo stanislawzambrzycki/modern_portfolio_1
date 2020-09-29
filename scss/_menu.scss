@@ -1,0 +1,66 @@
+.menu-btn {
+  position: absolute;
+  z-index: 3;
+  right: 35px;
+  top: 25px;
+  cursor: pointer;
+  @include easeOut;
+
+  .btn-line {
+    &:nth-child(1) {
+      width: 30px;
+      height: 5px;
+      margin: 0 0 5px 0;
+      background-color: white;
+      @include easeOut;
+      // &:hover {
+      //   background-color: $secondary-color;
+      //   @include easeOut();
+      // }
+    }
+    &:nth-child(2) {
+      width: 30px;
+      height: 5px;
+      margin: 0 0 5px 0;
+      background-color: white;
+      @include easeOut;
+      // &:hover {
+      //   background-color: $secondary-color;
+      //   @include easeOut();
+      // }
+    }
+    &:nth-child(3) {
+      width: 30px;
+      height: 5px;
+      margin: 0;
+      background-color: white;
+      @include easeOut;
+      // &:hover {
+      //   background-color: $secondary-color;
+      //   @include easeOut();
+      // }
+    }
+  }
+
+  // Rotate Into X With Menu Lines
+  &.close {
+    transform: rotate(180deg);
+
+    .btn-line {
+      // Line 1 - Rotate
+      &:nth-child(1) {
+        // transform: rotate(45deg) translate(7.5px, 7.5px);
+        transform: translate(0px, 12px) rotate(-45deg);
+      }
+      // Line 2 - Hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+      // Line 3 - Rotate
+      &:nth-child(3) {
+        // transform: rotate(135deg) translate(-7px, 6.5px);
+        transform: translate(0px, -8px) rotate(45deg);
+      }
+    }
+  }
+}
