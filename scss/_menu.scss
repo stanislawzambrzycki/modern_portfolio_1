@@ -8,7 +8,7 @@
 
   .btn-line {
     &:nth-child(1) {
-      width: 30px;
+      width: 35px;
       height: 5px;
       margin: 0 0 5px 0;
       background-color: white;
@@ -19,7 +19,7 @@
       // }
     }
     &:nth-child(2) {
-      width: 30px;
+      width: 35px;
       height: 5px;
       margin: 0 0 5px 0;
       background-color: white;
@@ -30,7 +30,7 @@
       // }
     }
     &:nth-child(3) {
-      width: 30px;
+      width: 35px;
       height: 5px;
       margin: 0;
       background-color: white;
@@ -62,5 +62,105 @@
         transform: translate(0px, -8px) rotate(45deg);
       }
     }
+  }
+}
+
+// Menu Overlay
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  visibility: hidden;
+
+  &.show {
+    visibility: visible;
+  }
+
+  &-branding,
+  &-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    width: 50%;
+    height: 100vh;
+    overflow: hidden;
+    // opacity: 0.5;
+  }
+
+  // Nav Side
+  &-nav {
+    margin: 0;
+    padding: 0;
+    background: darken(hsl(202, 25%, 75%), 50);
+    // background: lighten($primary-color, 1);
+    list-style: none;
+    transform: translate3d(0, -100%, 0);
+    @include easeOut;
+
+    &.show {
+      //Slide in from top
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  // Branding Side
+  &-branding {
+    margin: 0;
+    padding: 0;
+    background: darken($primary-color, 5);
+    list-style: none;
+    transform: translate3d(0, 100%, 0);
+    @include easeOut;
+
+    &.show {
+      //Slide in from bottom
+      transform: translate3d(0, 0, 0);
+    }
+
+    .portrait {
+      width: 400px;
+      height: 400px;
+      background: url("/img/network-3424070_960_720.png") center;
+      border-radius: 50%;
+      //   border: solid 1px $secondary-color;
+    }
+  }
+
+  .nav-item {
+    transform: translate3d(900px, 0, 0);
+    @include easeOut;
+
+    &.show {
+      //Slide in from right
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.current > a {
+      color: $secondary-color;
+    }
+  }
+
+  .nav-link {
+    display: inline-block;
+    position: relative;
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+    @include easeOut;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+}
+
+// Delay each nav item slide by 0.15s
+@for $x from 1 through 4 {
+  .nav-item:nth-child(#{$x}) {
+    transition-delay: $x * 0.15s;
   }
 }

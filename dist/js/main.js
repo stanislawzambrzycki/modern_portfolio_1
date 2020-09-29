@@ -32,3 +32,5 @@ function toggleMenu() {
     showMenu = false;
   }
 }
+
+// Maybe Add Hover Effect On Menu?
