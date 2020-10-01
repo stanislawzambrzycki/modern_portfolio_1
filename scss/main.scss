@@ -9,30 +9,35 @@
 }
 
 body {
-  @include background;
   background: $primary-color;
-  color: white;
-  height: 100%;
+  color: set-text-color($primary-color);
+  height: 100vh;
   font-family: "Space Mono", monospace;
+}
+
+#bg-img {
+  @include background;
+  height: 100%;
 }
 
 h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
   &.lg-heading {
     font-size: 4rem;
   }
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
+    font-size: 1.5rem;
     background: rgba(lighten($primary-color, 2), 0.3);
   }
 }
 
 a {
-  color: white;
+  color: set-text-color($primary-color);
   text-decoration: none;
 }
 
@@ -67,4 +72,54 @@ main {
       margin-top: 20vh;
     }
   }
+}
+
+.about-info {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "bio-image bio bio" "job-1 job-2 job-3";
+
+  .bio-image {
+    grid-area: bio-image;
+    background: url("/img/network-3424070_960_720.png") center;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+
+  .bio {
+    grid-area: bio;
+    font-size: 1.5rem;
+  }
+
+  .job-1 {
+    grid-area: job-1;
+  }
+
+  .job-2 {
+    grid-area: job-2;
+  }
+
+  .job-3 {
+    grid-area: job-3;
+  }
+
+  .job {
+    background: darken(hsl(202, 25%, 75%), 50);
+    padding: 0.5rem;
+    border-bottom: $secondary-color 5px solid;
+  }
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primary-color, 10);
+  color: set-text-color($primary-color);
+  height: 60px;
+  border: solid;
+  border-color: $secondary-color;
+  border-width: 0.1px 0px 0.1px 0px;
 }

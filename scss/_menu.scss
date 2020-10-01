@@ -11,7 +11,7 @@
       width: 35px;
       height: 5px;
       margin: 0 0 5px 0;
-      background-color: white;
+      background-color: set-text-color($primary-color);
       @include easeOut;
       // &:hover {
       //   background-color: $secondary-color;
@@ -22,7 +22,7 @@
       width: 35px;
       height: 5px;
       margin: 0 0 5px 0;
-      background-color: white;
+      background-color: set-text-color($primary-color);
       @include easeOut;
       // &:hover {
       //   background-color: $secondary-color;
@@ -33,7 +33,7 @@
       width: 35px;
       height: 5px;
       margin: 0;
-      background-color: white;
+      background-color: set-text-color($primary-color);
       @include easeOut;
       // &:hover {
       //   background-color: $secondary-color;
@@ -93,7 +93,7 @@
   &-nav {
     margin: 0;
     padding: 0;
-    background: darken(hsl(202, 25%, 75%), 50);
+    background: lighten($primary-color, 10);
     // background: lighten($primary-color, 1);
     list-style: none;
     transform: translate3d(0, -100%, 0);
@@ -148,7 +148,7 @@
     text-transform: uppercase;
     padding: 1rem 0;
     font-weight: 300;
-    color: white;
+    color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
 

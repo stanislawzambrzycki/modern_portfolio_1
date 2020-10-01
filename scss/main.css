@@ -88,7 +88,7 @@
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: #304450;
+  background: #1c293b;
   list-style: none;
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
@@ -104,7 +104,7 @@
 .menu-branding {
   margin: 0;
   padding: 0;
-  background: black;
+  background: #030507;
   list-style: none;
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
@@ -137,7 +137,7 @@
 }
 
 .menu .nav-item.current > a {
-  color: #33daff;
+  color: #00f2fa;
 }
 
 .menu .nav-link {
@@ -154,7 +154,7 @@
 }
 
 .menu .nav-link:hover {
-  color: #33daff;
+  color: #00f2fa;
 }
 
 .nav-item:nth-child(1) {
@@ -177,7 +177,7 @@
           transition-delay: 0.6s;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 860px) {
   main {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -185,8 +185,10 @@
     text-align: center;
   }
   main .lg-heading {
-    line-height: 1;
     margin-bottom: 1rem;
+  }
+  main#home h1 {
+    margin-top: 10vh;
   }
   ul.menu-nav,
   div.menu-branding {
@@ -200,13 +202,13 @@
             transform: translate3d(0, 0, 0);
   }
   .menu-nav {
-    height: 75vh;
+    height: 70vh;
     -webkit-transform: translate3d(-100%, 0, 0);
             transform: translate3d(-100%, 0, 0);
     font-size: 2rem;
   }
   .menu-branding {
-    height: 25vh;
+    height: 30vh;
     -webkit-transform: translate3d(100%, 0, 0);
             transform: translate3d(100%, 0, 0);
   }
@@ -216,9 +218,9 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   main#home h1 {
-    margin-top: 10vh;
+    margin-top: 5vh;
   }
 }
 
@@ -230,34 +232,29 @@
 }
 
 body {
-  background: #080602;
+  background: #0b1118;
   color: white;
-  height: 100%;
+  height: 100vh;
   font-family: "Space Mono", monospace;
 }
 
-body#bg-img {
-  background: url(/img/network-4851079_960_720.png);
-  background-attachment: fixed;
-  background-size: cover;
+#bg-img {
+  height: 100%;
 }
 
-body#bg-img:after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  background: rgba(8, 6, 2, 0);
+#bg-img#bg-img {
+  background: url(/img/fractal-1648884_960_720.png);
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: right bottom;
+  background-repeat: no-repeat;
 }
 
 h1,
 h2,
 h3 {
   margin: 0;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 h1.lg-heading,
@@ -271,7 +268,8 @@ h2.sm-heading,
 h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: rgba(15, 12, 5, 0.3);
+  font-size: 1.5rem;
+  background: rgba(15, 22, 31, 0.3);
 }
 
 a {
@@ -286,7 +284,7 @@ header {
 }
 
 .text-secondary {
-  color: #33daff;
+  color: #00f2fa;
 }
 
 main {
@@ -303,7 +301,7 @@ main .icons a {
 }
 
 main .icons a:hover {
-  color: #33daff;
+  color: #00f2fa;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
@@ -314,5 +312,68 @@ main#home {
 
 main#home h1 {
   margin-top: 20vh;
+}
+
+.about-info {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 30px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "bio-image bio bio" "job-1 job-2 job-3";
+}
+
+.about-info .bio-image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: bio-image;
+  background: url("/img/network-3424070_960_720.png") center;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.about-info .bio {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: bio;
+  font-size: 1.5rem;
+}
+
+.about-info .job-1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: job-1;
+}
+
+.about-info .job-2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: job-2;
+}
+
+.about-info .job-3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: job-3;
+}
+
+.about-info .job {
+  background: #304450;
+  padding: 0.5rem;
+  border-bottom: #00f2fa 5px solid;
+}
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: black;
+  color: white;
+  height: 60px;
+  border: solid;
+  border-color: #00f2fa;
+  border-width: 0.1px 0px 0.1px 0px;
 }
 /*# sourceMappingURL=main.css.map */
