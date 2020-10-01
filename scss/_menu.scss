@@ -11,7 +11,7 @@
       width: 35px;
       height: 5px;
       margin: 0 0 5px 0;
-      background-color: set-text-color($primary-color);
+      background-color: white;
       @include easeOut;
       // &:hover {
       //   background-color: $secondary-color;
@@ -22,7 +22,7 @@
       width: 35px;
       height: 5px;
       margin: 0 0 5px 0;
-      background-color: set-text-color($primary-color);
+      background-color: white;
       @include easeOut;
       // &:hover {
       //   background-color: $secondary-color;
@@ -33,7 +33,7 @@
       width: 35px;
       height: 5px;
       margin: 0;
-      background-color: set-text-color($primary-color);
+      background-color: white;
       @include easeOut;
       // &:hover {
       //   background-color: $secondary-color;

@@ -10,7 +10,7 @@
 
 body {
   background: $primary-color;
-  color: set-text-color($primary-color);
+  color: white;
   height: 100vh;
   font-family: "Space Mono", monospace;
 }
@@ -37,7 +37,7 @@ h3 {
 }
 
 a {
-  color: set-text-color($primary-color);
+  color: white;
   text-decoration: none;
 }
 

@@ -147,7 +147,7 @@
   text-transform: uppercase;
   padding: 1rem 0;
   font-weight: 300;
-  color: white;
+  color: set-text-color(#0b1118);
   text-decoration: none;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
@@ -187,7 +187,7 @@
   main .lg-heading {
     margin-bottom: 1rem;
   }
-  main#home h1 {
+  #home h1 {
     margin-top: 10vh;
   }
   ul.menu-nav,
@@ -219,7 +219,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  main#home h1 {
+  #home h1 {
     margin-top: 5vh;
   }
 }
@@ -370,7 +370,7 @@ main#home h1 {
   text-align: center;
   padding: 1rem;
   background: black;
-  color: white;
+  color: set-text-color(#0b1118);
   height: 60px;
   border: solid;
   border-color: #00f2fa;

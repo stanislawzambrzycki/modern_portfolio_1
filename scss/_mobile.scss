@@ -1,10 +1,10 @@
-// Widescreens
-@include mediaXl {
-}
+// // Widescreens
+// @include mediaXl {
+// }
 
-// Desktop & Laptop
-@include mediaLg {
-}
+// // Desktop & Laptop
+// @include mediaLg {
+// }
 
 // Tablets & Small Laptops
 @include mediaMd {
@@ -17,7 +17,7 @@
     }
   }
 
-  main#home h1 {
+  #home h1 {
     margin-top: 10vh;
   }
 
@@ -51,7 +51,7 @@
 
 // Smartphones
 @include mediaSm {
-  main#home h1 {
+  #home h1 {
     margin-top: 5vh;
   }
 }
