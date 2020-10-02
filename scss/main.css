@@ -246,6 +246,52 @@ main .icons a:hover {
   transition: all 0.5s ease-out;
 }
 
+.projects {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+}
+
+.projects img {
+  width: 100%;
+  -webkit-filter: saturate(40%);
+          filter: saturate(40%);
+  border: 1px rgba(0, 242, 250, 0.5) solid;
+}
+
+.projects img:hover {
+  -webkit-filter: none;
+          filter: none;
+  border-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.btn, .btn-dark, .btn-light {
+  display: inline-block;
+  width: 48%;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin: 0.3rem auto;
+}
+
+.btn:hover, .btn-dark:hover, .btn-light:hover {
+  background: white;
+  color: black;
+}
+
+.btn-dark {
+  background: black;
+  color: white;
+}
+
+.btn-light {
+  background: #61faff;
+  color: black;
+}
+
 .about-info {
   display: -ms-grid;
   display: grid;
@@ -297,7 +343,7 @@ main .icons a:hover {
 .about-info .job {
   background: #304450;
   padding: 0.5rem;
-  border-bottom: #00f2fa 2px solid;
+  border-bottom: rgba(0, 242, 250, 0.2) 1px solid;
 }
 
 #main-footer {
@@ -307,7 +353,7 @@ main .icons a:hover {
   color: white;
   height: 60px;
   border: solid;
-  border-color: #00f2fa;
+  border-color: rgba(0, 242, 250, 0.2);
   border-width: 0.1px 0px 0.1px 0px;
 }
 
@@ -321,6 +367,10 @@ main .icons a:hover {
   .sm-heading {
     font-size: 1.5rem;
   }
+  .projects {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media screen and (min-width: 861px) and (max-width: 1170px) {
@@ -332,6 +382,10 @@ main .icons a:hover {
   }
   .sm-heading {
     font-size: 1.3rem;
+  }
+  .projects {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -372,6 +426,10 @@ main .icons a:hover {
     width: 150px;
     height: 150px;
   }
+  .projects {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
   .about-info {
         grid-template-areas: "bio-image" "bio" "job-1" "job-2" "job-3";
     -ms-grid-columns: 1fr;
@@ -384,11 +442,15 @@ main .icons a:hover {
     margin-top: 15vh;
   }
   .lg-heading {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
   }
   .sm-heading {
     font-size: 0.8rem;
+  }
+  .projects {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 /*# sourceMappingURL=main.css.map */

@@ -10,6 +10,10 @@
   &.sm-heading {
     font-size: 1.5rem;
   }
+
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 // Desktop & Laptop
@@ -24,6 +28,9 @@
 
   &.sm-heading {
     font-size: 1.3rem;
+  }
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -71,6 +78,11 @@
       height: 150px;
     }
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .about-info {
     grid-template-areas:
       "bio-image"
@@ -90,10 +102,14 @@
   }
 
   .lg-heading {
-    font-size: 1.8rem;
+    font-size: 2rem;
     margin-bottom: 1rem;
   }
   &.sm-heading {
     font-size: 0.8rem;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }

@@ -64,6 +64,54 @@ main {
   }
 }
 
+//Work/Projects
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+
+  img {
+    width: 100%;
+    filter: saturate(40%);
+    border: 1px rgba($secondary-color, 0.5) solid;
+
+    &:hover {
+      filter: none;
+      border-color: rgba(white, 0.5);
+
+      @include easeOut;
+    }
+  }
+}
+
+//Button Styles
+
+.btn {
+  display: inline-block;
+  width: 48%;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin: 0.3rem auto;
+
+  &:hover {
+    background: white;
+    color: black;
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: black;
+  color: white;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($secondary-color, 20);
+  color: black;
+}
+
 .about-info {
   display: grid;
   grid-gap: 30px;
@@ -101,7 +149,7 @@ main {
   .job {
     background: darken(hsl(202, 25%, 75%), 50);
     padding: 0.5rem;
-    border-bottom: $secondary-color 2px solid;
+    border-bottom: rgba($secondary-color, 0.2) 1px solid;
   }
 }
 
@@ -112,7 +160,7 @@ main {
   color: white;
   height: 60px;
   border: solid;
-  border-color: $secondary-color;
+  border-color: rgba($secondary-color, 0.2);
   border-width: 0.1px 0px 0.1px 0px;
 }
 
