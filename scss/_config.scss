@@ -1,7 +1,7 @@
 $primary-color: hsl(214, 36%, 7%);
 // $secondary-color: hsl(30, 100%, 50%);
 $secondary-color: hsl(182, 100%, 49%);
-$show-home-image: true;
+$show-home-image: false;
 $home-image: url(/img/fractal-1648884_960_720.png);
 $background-opacity: 1;
 
@@ -55,14 +55,14 @@ $background-opacity: 1;
   }
 }
 
-// @mixin mediaLg {
-//   @media screen and (min-width: 861px) and (max-with: 1170px) {
-//     @content;
-//   }
-// }
+@mixin mediaLg {
+  @media screen and (min-width: 861px) and (max-width: 1170px) {
+    @content;
+  }
+}
 
-// @mixin mediaXl {
-//   @media screen and (min-width: 1171px) {
-//     @content;
-//   }
-// }
+@mixin mediaXl {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

@@ -177,53 +177,6 @@
           transition-delay: 0.6s;
 }
 
-@media screen and (max-width: 860px) {
-  main {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-  }
-  main .lg-heading {
-    margin-bottom: 1rem;
-  }
-  #home h1 {
-    margin-top: 10vh;
-  }
-  ul.menu-nav,
-  div.menu-branding {
-    float: none;
-    width: 100%;
-    min-height: 0;
-  }
-  ul.menu-nav.show,
-  div.menu-branding.show {
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  .menu-nav {
-    height: 70vh;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-    font-size: 2rem;
-  }
-  .menu-branding {
-    height: 30vh;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-  }
-  .menu-branding .portrait {
-    width: 150px;
-    height: 150px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #home h1 {
-    margin-top: 5vh;
-  }
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -242,14 +195,6 @@ body {
   height: 100%;
 }
 
-#bg-img#bg-img {
-  background: url(/img/fractal-1648884_960_720.png);
-  background-attachment: fixed;
-  background-size: contain;
-  background-position: right bottom;
-  background-repeat: no-repeat;
-}
-
 h1,
 h2,
 h3 {
@@ -257,19 +202,13 @@ h3 {
   font-weight: 500;
 }
 
-h1.lg-heading,
-h2.lg-heading,
-h3.lg-heading {
-  font-size: 4rem;
-}
-
 h1.sm-heading,
 h2.sm-heading,
 h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  font-size: 1.5rem;
-  background: rgba(15, 22, 31, 0.3);
+  background: #141d2a;
+  width: 100vw;
 }
 
 a {
@@ -289,7 +228,8 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%;
+  min-height: calc(99vh - 60px);
+  overflow: hidden;
 }
 
 main .icons {
@@ -306,20 +246,13 @@ main .icons a:hover {
   transition: all 0.5s ease-out;
 }
 
-main#home {
-  overflow: hidden;
-}
-
-main#home h1 {
-  margin-top: 20vh;
-}
-
 .about-info {
   display: -ms-grid;
   display: grid;
   grid-gap: 30px;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(200px, auto);
       grid-template-areas: "bio-image bio bio" "job-1 job-2 job-3";
 }
 
@@ -329,6 +262,7 @@ main#home h1 {
   grid-area: bio-image;
   background: url("/img/network-3424070_960_720.png") center;
   margin: auto;
+  padding: 5em;
   width: 150px;
   height: 150px;
   border-radius: 50%;
@@ -363,17 +297,98 @@ main#home h1 {
 .about-info .job {
   background: #304450;
   padding: 0.5rem;
-  border-bottom: #00f2fa 5px solid;
+  border-bottom: #00f2fa 2px solid;
 }
 
 #main-footer {
   text-align: center;
   padding: 1rem;
   background: black;
-  color: set-text-color(#0b1118);
+  color: white;
   height: 60px;
   border: solid;
   border-color: #00f2fa;
   border-width: 0.1px 0px 0.1px 0px;
+}
+
+@media screen and (min-width: 1171px) {
+  #home h1 {
+    margin-top: 20vh;
+  }
+  .lg-heading {
+    font-size: 5rem;
+  }
+  .sm-heading {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 861px) and (max-width: 1170px) {
+  #home h1 {
+    margin-top: 20vh;
+  }
+  .lg-heading {
+    font-size: 4rem;
+  }
+  .sm-heading {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  #home h1 {
+    margin-top: 20vh;
+  }
+  .lg-heading {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .sm-heading {
+    font-size: 1.1rem;
+  }
+  ul.menu-nav,
+  div.menu-branding {
+    float: none;
+    width: 100%;
+    min-height: 0;
+  }
+  ul.menu-nav.show,
+  div.menu-branding.show {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  .menu-nav {
+    height: 70vh;
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+    font-size: 2rem;
+  }
+  .menu-branding {
+    height: 30vh;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  .menu-branding .portrait {
+    width: 150px;
+    height: 150px;
+  }
+  .about-info {
+        grid-template-areas: "bio-image" "bio" "job-1" "job-2" "job-3";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #home h1 {
+    margin-top: 15vh;
+  }
+  .lg-heading {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  .sm-heading {
+    font-size: 0.8rem;
+  }
 }
 /*# sourceMappingURL=main.css.map */
