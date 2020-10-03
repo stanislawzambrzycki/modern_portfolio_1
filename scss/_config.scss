@@ -2,9 +2,8 @@
 $primary-color: hsl(42, 3%, 0%);
 $secondary-color: hsl(42, 60%, 50%);
 // $secondary-color: hsl(182, 100%, 45%);
-$show-home-image: false;
-$home-image: url(../img/fractal-1648884_960_720.png);
-$background-opacity: 1;
+$show-home-image: true;
+$home-image: url(../img/hex-4270275_960_720.png);
 
 @mixin easeOut {
   transition: all 0.5s ease-out;
@@ -15,8 +14,8 @@ $background-opacity: 1;
     &#bg-img {
       background: $home-image;
       background-attachment: fixed;
-      background-size: contain;
-      background-position: right bottom;
+      background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
 
       // &:after {
@@ -26,11 +25,21 @@ $background-opacity: 1;
       //   right: 0;
       //   width: 100%;
       //   height: 100%;
-      //   z-index: -1;
+      //   z-index: 0;
       //   background: rgba($primary-color, $background-opacity);
       // }
     }
   }
+}
+
+#bg-img {
+  @include background;
+  height: 100%;
+}
+
+#bg-opacity {
+  height: 100vh;
+  background-color: rgba($primary-color, 0);
 }
 
 // Set Text Color
