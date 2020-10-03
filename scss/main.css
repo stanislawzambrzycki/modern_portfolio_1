@@ -21,8 +21,8 @@
   right: 35px;
   top: 25px;
   cursor: pointer;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .menu-btn .btn-line:nth-child(1) {
@@ -30,8 +30,8 @@
   height: 5px;
   margin: 0 0 5px 0;
   background-color: white;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .menu-btn .btn-line:nth-child(2) {
@@ -39,8 +39,8 @@
   height: 5px;
   margin: 0 0 5px 0;
   background-color: white;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .menu-btn .btn-line:nth-child(3) {
@@ -48,8 +48,8 @@
   height: 5px;
   margin: 0;
   background-color: white;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .menu-btn.close {
@@ -95,8 +95,6 @@
 
 .menu .display .contact-data {
   height: auto;
-  width: 50vw;
-  border-radius: 3px;
   background-color: #1f1f1f;
 }
 
@@ -130,8 +128,8 @@
   list-style: none;
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .menu-nav.show {
@@ -149,8 +147,8 @@
   list-style: none;
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .menu-branding.show {
@@ -161,16 +159,18 @@
 .menu-branding .portrait {
   width: 400px;
   height: 400px;
+  -webkit-filter: contrast(170%);
+          filter: contrast(170%);
   background: url(../img/black.png) center;
   border-radius: 50%;
-  border: 1px solid #cc9e33;
+  border: 1px solid rgba(204, 158, 51, 0);
 }
 
 .menu .nav-item {
   -webkit-transform: translate3d(900px, 0, 0);
           transform: translate3d(900px, 0, 0);
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .menu .nav-item.show {
@@ -191,8 +191,8 @@
   font-weight: 300;
   color: white;
   text-decoration: none;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .menu .nav-link:hover {
@@ -287,8 +287,8 @@ main .icons a {
 
 main .icons a:hover {
   color: #cc9e33;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .projects {
@@ -310,8 +310,8 @@ main .icons a:hover {
   -webkit-filter: none;
           filter: none;
   border-color: rgba(204, 158, 51, 0.7);
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .boxes {
@@ -334,8 +334,8 @@ main .icons a:hover {
   border: 1px rgba(255, 255, 255, 0.8) solid;
   padding: 1.5rem 2.5rem;
   margin-bottom: 3rem;
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.7s ease-out;
+  transition: all 0.7s ease-out;
 }
 
 .boxes div:hover {
@@ -398,7 +398,7 @@ main .icons a:hover {
   padding: 5em;
   width: 150px;
   height: 150px;
-  border: 1px solid #cc9e33;
+  border: 1px solid rgba(204, 158, 51, 0);
   border-radius: 50%;
 }
 
@@ -458,6 +458,9 @@ main .icons a:hover {
   .projects {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
+  }
+  .contact-data {
+    width: 50vw;
   }
 }
 
@@ -523,6 +526,9 @@ main .icons a:hover {
         grid-template-areas: "bio-image" "bio" "skill-1" "skill-2" "skill-3";
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
+  }
+  .contact-data p {
+    width: 100vw;
   }
 }
 

@@ -85,8 +85,7 @@
     align-items: left;
     .contact-data {
       height: auto;
-      width: 50vw;
-      border-radius: 3px;
+      // border-radius: 3px;
       background-color: lighten($primary-color, 12);
 
       p {
@@ -142,10 +141,10 @@
     .portrait {
       width: 400px;
       height: 400px;
-      // filter: contrast(130%) sepia(100%);
+      filter: contrast(170%);
       background: url(../img/black.png) center;
       border-radius: 50%;
-      border: 1px solid rgba($secondary-color, 1);
+      border: 1px solid rgba($secondary-color, 0);
     }
   }
 
