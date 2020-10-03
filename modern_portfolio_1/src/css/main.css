@@ -1,7 +1,7 @@
 #bg-img {
   height: 100%; }
   #bg-img#bg-img {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/hex-4270275_1920.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../assets/hex-4270275_1920.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
@@ -328,7 +328,11 @@ main {
   .projects {
     grid-template-columns: repeat(2, 1fr); }
   .about-info {
-    grid-template-areas: "bio-image" "bio" "skill-1" "skill-2" "skill-3";
+    grid-template-areas: "bio-image"
+ "bio"
+ "skill-1"
+ "skill-2"
+ "skill-3";
     grid-template-columns: 1fr; }
   .contact-data p {
     width: 100vw; } }
