@@ -1,8 +1,9 @@
-$primary-color: hsl(214, 36%, 7%);
-// $secondary-color: hsl(30, 100%, 50%);
-$secondary-color: hsl(182, 100%, 49%);
+// $primary-color: hsl(214, 36%, 7%);
+$primary-color: hsl(42, 3%, 0%);
+$secondary-color: hsl(42, 60%, 50%);
+// $secondary-color: hsl(182, 100%, 45%);
 $show-home-image: false;
-$home-image: url(/img/fractal-1648884_960_720.png);
+$home-image: url(../img/fractal-1648884_960_720.png);
 $background-opacity: 1;
 
 @mixin easeOut {

@@ -65,6 +65,30 @@
   visibility: visible;
 }
 
+.menu .contact-item {
+  display: none;
+}
+
+.menu .display {
+  display: inline-block;
+  -webkit-box-align: left;
+      -ms-flex-align: left;
+          align-items: left;
+}
+
+.menu .display .contact-data {
+  height: auto;
+  width: 50vw;
+  border-radius: 3px;
+  background-color: #1f1f1f;
+}
+
+.menu .display .contact-data p {
+  padding: 0.4rem 1rem;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
 .menu-branding, .menu-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,9 +100,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   float: left;
   width: 50%;
   height: 100vh;
@@ -87,8 +108,8 @@
 
 .menu-nav {
   margin: 0;
-  padding: 0;
-  background: #1c293b;
+  padding: 25vh 0 0 0;
+  background: #1a1a1a;
   list-style: none;
   -webkit-transform: translate3d(0, -100%, 0);
           transform: translate3d(0, -100%, 0);
@@ -104,7 +125,10 @@
 .menu-branding {
   margin: 0;
   padding: 0;
-  background: #030507;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: black;
   list-style: none;
   -webkit-transform: translate3d(0, 100%, 0);
           transform: translate3d(0, 100%, 0);
@@ -120,8 +144,9 @@
 .menu-branding .portrait {
   width: 400px;
   height: 400px;
-  background: url("/img/network-3424070_960_720.png") center;
+  background: url(../img/black.png) center;
   border-radius: 50%;
+  border: 1px solid #cc9e33;
 }
 
 .menu .nav-item {
@@ -137,7 +162,7 @@
 }
 
 .menu .nav-item.current > a {
-  color: #00f2fa;
+  color: #cc9e33;
 }
 
 .menu .nav-link {
@@ -154,7 +179,7 @@
 }
 
 .menu .nav-link:hover {
-  color: #00f2fa;
+  color: #cc9e33;
 }
 
 .nav-item:nth-child(1) {
@@ -185,7 +210,7 @@
 }
 
 body {
-  background: #0b1118;
+  background: black;
   color: white;
   height: 100vh;
   font-family: "Space Mono", monospace;
@@ -202,12 +227,18 @@ h3 {
   font-weight: 500;
 }
 
+h1.lg-heading,
+h2.lg-heading,
+h3.lg-heading {
+  padding-left: 1rem;
+}
+
 h1.sm-heading,
 h2.sm-heading,
 h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: #141d2a;
+  background: #0d0d0d;
   width: 100vw;
 }
 
@@ -223,7 +254,7 @@ header {
 }
 
 .text-secondary {
-  color: #00f2fa;
+  color: #cc9e33;
 }
 
 main {
@@ -234,6 +265,7 @@ main {
 
 main .icons {
   margin-top: 1rem;
+  padding-left: 1rem;
 }
 
 main .icons a {
@@ -241,7 +273,7 @@ main .icons a {
 }
 
 main .icons a:hover {
-  color: #00f2fa;
+  color: #cc9e33;
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
@@ -258,13 +290,13 @@ main .icons a:hover {
   width: 100%;
   -webkit-filter: saturate(40%);
           filter: saturate(40%);
-  border: 1px rgba(0, 242, 250, 0.5) solid;
+  border: 2px rgba(255, 255, 255, 0.3) solid;
 }
 
 .projects img:hover {
   -webkit-filter: none;
           filter: none;
-  border-color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(204, 158, 51, 0.7);
   -webkit-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
@@ -295,7 +327,7 @@ main .icons a:hover {
 
 .boxes div:hover {
   padding: 1rem 1.5rem;
-  background: #00f2fa;
+  background: #cc9e33;
   color: black;
 }
 
@@ -311,18 +343,26 @@ main .icons a:hover {
   margin: 0.3rem auto;
 }
 
-.btn:hover, .btn-dark:hover, .btn-light:hover {
-  background: white;
-  color: black;
-}
-
 .btn-dark {
   background: black;
   color: white;
 }
 
+.btn-dark:hover {
+  background: white;
+  color: black;
+}
+
 .btn-light {
-  background: #61faff;
+  background: #cc9e33;
+  -webkit-filter: contrast(110%);
+          filter: contrast(110%);
+  color: black;
+}
+
+.btn-light:hover {
+  -webkit-filter: contrast(150%);
+          filter: contrast(150%);
   color: black;
 }
 
@@ -333,18 +373,19 @@ main .icons a:hover {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(200px, auto);
-      grid-template-areas: "bio-image bio bio" "job-1 job-2 job-3";
+      grid-template-areas: "bio-image bio bio" "skill-1 skill-2 skill-3";
 }
 
 .about-info .bio-image {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: bio-image;
-  background: url("/img/network-3424070_960_720.png") center;
+  background: url(../img/black.png) center;
   margin: auto;
   padding: 5em;
   width: 150px;
   height: 150px;
+  border: 1px solid #cc9e33;
   border-radius: 50%;
 }
 
@@ -356,28 +397,28 @@ main .icons a:hover {
   font-size: 1.5rem;
 }
 
-.about-info .job-1 {
+.about-info .skill-1 {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: job-1;
+  grid-area: skill-1;
 }
 
-.about-info .job-2 {
+.about-info .skill-2 {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
-  grid-area: job-2;
+  grid-area: skill-2;
 }
 
-.about-info .job-3 {
+.about-info .skill-3 {
   -ms-grid-row: 2;
   -ms-grid-column: 3;
-  grid-area: job-3;
+  grid-area: skill-3;
 }
 
-.about-info .job {
-  background: #304450;
+.about-info .skill {
+  background: rgba(255, 255, 255, 0.1);
   padding: 0.5rem;
-  border-bottom: rgba(0, 242, 250, 0.2) 1px solid;
+  border-bottom: rgba(204, 158, 51, 0.2) 1px solid;
 }
 
 #main-footer {
@@ -387,7 +428,7 @@ main .icons a:hover {
   color: white;
   height: 60px;
   border: solid;
-  border-color: rgba(0, 242, 250, 0.2);
+  border-color: rgba(204, 158, 51, 0.2);
   border-width: 0.1px 0px 0.1px 0px;
 }
 
@@ -447,9 +488,10 @@ main .icons a:hover {
   }
   .menu-nav {
     height: 70vh;
+    padding: 0 0 0 0;
     -webkit-transform: translate3d(-100%, 0, 0);
             transform: translate3d(-100%, 0, 0);
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
   .menu-branding {
     height: 30vh;
@@ -465,7 +507,7 @@ main .icons a:hover {
         grid-template-columns: repeat(2, 1fr);
   }
   .about-info {
-        grid-template-areas: "bio-image" "bio" "job-1" "job-2" "job-3";
+        grid-template-areas: "bio-image" "bio" "skill-1" "skill-2" "skill-3";
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }

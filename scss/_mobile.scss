@@ -65,8 +65,9 @@
 
   .menu-nav {
     height: 70vh;
+    padding: 0 0 0 0;
     transform: translate3d(-100%, 0, 0);
-    font-size: 2rem;
+    font-size: 1.4rem;
   }
 
   .menu-branding {
@@ -87,9 +88,9 @@
     grid-template-areas:
       "bio-image"
       "bio"
-      "job-1"
-      "job-2"
-      "job-3";
+      "skill-1"
+      "skill-2"
+      "skill-3";
 
     grid-template-columns: 1fr;
   }
