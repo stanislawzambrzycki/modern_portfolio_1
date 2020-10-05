@@ -182,7 +182,7 @@ main {
   }
 
   .skill {
-    background: lighten(rgba($secondary-color, 0.1), 50);
+    background: desaturate(lighten($primary-color, 10), 10);
     padding: 0.5rem;
     border-bottom: rgba($secondary-color, 0.2) 1px solid;
   }

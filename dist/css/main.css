@@ -1,15 +1,9 @@
 #bg-img {
   height: 100%; }
-  #bg-img#bg-img {
-    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../img/hex-4270275_1920.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; }
 
 #bg-opacity {
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0); }
+  background-color: rgba(6, 10, 19, 0); }
 
 .menu-btn {
   position: absolute;
@@ -59,7 +53,7 @@
     align-items: left; }
     .menu .display .contact-data {
       height: auto;
-      background-color: #1f1f1f; }
+      background-color: #162141; }
       .menu .display .contact-data p {
         padding: 0.4rem 1rem;
         font-size: 1.4rem;
@@ -75,7 +69,7 @@
   .menu-nav {
     margin: 0;
     padding: 25vh 0 0 0;
-    background: #1a1a1a;
+    background: #131d39;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.7s ease-out; }
@@ -136,7 +130,7 @@
   padding: 0; }
 
 body {
-  background: black;
+  background: #060a13;
   color: white;
   height: 100vh;
   font-family: "Space Mono", monospace; }
@@ -155,7 +149,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: #0d0d0d;
+    background: #0d1326;
     width: 100vw; }
 
 a {
@@ -262,7 +256,7 @@ main {
   .about-info .skill-3 {
     grid-area: skill-3; }
   .about-info .skill {
-    background: rgba(255, 255, 255, 0.1);
+    background: #171f36;
     padding: 0.5rem;
     border-bottom: rgba(204, 158, 51, 0.2) 1px solid; }
 
