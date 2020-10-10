@@ -8,6 +8,6 @@
   </div>
 </template>
 
-<script src="./App.js"/>
-<style src="./css/main.css"/>
-
+<script src="./App.js" />
+<style src="./css/main.css"></style>
+<style src="@fortawesome/fontawesome-free/css/all.css"></style>

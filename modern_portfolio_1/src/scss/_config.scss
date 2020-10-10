@@ -1,8 +1,8 @@
-// $primary-color: hsl(214, 36%, 7%);
-$primary-color: hsl(42, 3%, 0%);
+$primary-color: hsl(225, 50%, 5%);
+// $primary-color: hsl(42, 3%, 0%);
 $secondary-color: hsl(42, 60%, 50%);
 // $secondary-color: hsl(182, 100%, 45%);
-$show-home-image: true;
+$show-home-image: false;
 $home-image: url(../assets/hex-4270275_1920.jpg);
 
 @mixin easeOut {
@@ -12,10 +12,8 @@ $home-image: url(../assets/hex-4270275_1920.jpg);
 @mixin background {
   @if $show-home-image {
     &#bg-img {
-      background: linear-gradient(
-        rgba(0, 0, 0, 0.3), 
-        rgba(0, 0, 0, 0.3)
-      ), $home-image;
+      background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        $home-image;
       background-attachment: fixed;
       background-size: cover;
       background-position: center;

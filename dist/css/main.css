@@ -3,7 +3,7 @@
 
 #bg-opacity {
   height: 100vh;
-  background-color: rgba(6, 10, 19, 0); }
+  background-color: rgba(6, 10, 19, 0.3); }
 
 .menu-btn {
   position: absolute;
@@ -256,7 +256,7 @@ main {
   .about-info .skill-3 {
     grid-area: skill-3; }
   .about-info .skill {
-    background: #171f36;
+    background: rgba(255, 255, 255, 0.1);
     padding: 0.5rem;
     border-bottom: rgba(204, 158, 51, 0.2) 1px solid; }
 
