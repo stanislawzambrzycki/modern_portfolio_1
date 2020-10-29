@@ -1,5 +1,5 @@
 <template>
-  <div>    
+  <div>
     <main id="contact">
       <h1 class="lg-heading">Contact <span class="text-secondary">Me</span></h1>
       <h2 class="sm-heading">This is how you can reach me...</h2>
@@ -13,9 +13,9 @@
       </div>
     </main>
 
-    <footer id="main-footer">Copyright &copy; 2020</footer>
+    <footer id="main-footer">Copyright&copy; 2020</footer>
   </div>
 </template>
 
-<script src="./contact.js"/>
-<style src="./contact.css"/>
+<script src="./contact.js" />
+<style src="./contact.css" />

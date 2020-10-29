@@ -11,30 +11,47 @@
         <div class="portrait"></div>
       </div>
       <ul class="menu-nav">
-        <li class="nav-item current">
-          <a href="#" class="nav-link" @click="$emit('navigate', 'home'), toggleMenu()">Home</a>
+        <li :class="main ? 'nav-item current' : 'nav-item'">
+          <a
+            href="#"
+            class="nav-link"
+            @click="$emit('navigate', 'home'), toggleMenu()"
+            >Home</a
+          >
+        </li>
+        <li :class="about ? 'nav-item current' : 'nav-item'">
+          <a
+            href="#"
+            class="nav-link"
+            @click="$emit('navigate', 'about'), toggleMenu()"
+            >About Me</a
+          >
+        </li>
+        <li :class="work ? 'nav-item current' : 'nav-item'">
+          <a
+            href="#"
+            class="nav-link"
+            @click="$emit('navigate', 'work'), toggleMenu()"
+            >My Work</a
+          >
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link" @click="$emit('navigate', 'about'), toggleMenu()">About Me</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link" @click="$emit('navigate', 'work'), toggleMenu()">My Work</a>
-        </li>
-        <li class="nav-item">
-          <a href="#" class="nav-link contact-btn" @click="toggleContactItems">How To Reach Me</a>
+          <a href="#" class="nav-link contact-btn" @click="toggleContactItems"
+            >How To Reach Me</a
+          >
         </li>
         <li class="contact-item">
           <div class="contact-data">
             <p>
               <span class="text-secondary">Email:</span>
-              stanislaw.zambrzycki@poczta.onet.pl
+              stanislaw.zambrzycki<br />@poczta.onet.pl
             </p>
-            <p><span class="text-secondary">Phone:</span> 999 999 999</p>
+            <p><span class="text-secondary">Phone: </span>999 999 999</p>
           </div>
         </li>
       </ul>
     </nav>
   </header>
 </template>
-<script src="./menu.js"/>
-<style src="./menu.css"/>
+<script src="./menu.js" />
+<style src="./menu.css" />

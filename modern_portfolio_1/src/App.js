@@ -50,6 +50,12 @@ export default {
           this.showWork = false;
           break;
       }
+      this.$refs.menu.highlight(
+        this.showMain,
+        this.showAbout,
+        this.showContact,
+        this.showWork
+      );
     },
   },
 };

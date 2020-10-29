@@ -1,10 +1,18 @@
 <template>
   <div id="app">
-    <MenuComponent @navigate="navigateTo($event)"></MenuComponent>
-    <MainComponent v-if="showMain"></MainComponent>
+    <MenuComponent ref="menu" @navigate="navigateTo($event)"></MenuComponent>
+    <MainComponent
+      v-if="showMain"
+      ref="main"
+      @navigate="navigateTo($event)"
+    ></MainComponent>
     <AboutComponent v-if="showAbout"></AboutComponent>
     <ContactComponent v-if="showContact"></ContactComponent>
-    <WorkComponent v-if="showWork"></WorkComponent>
+    <WorkComponent
+      v-if="showWork"
+      ref="work"
+      @navigate="navigateTo($event)"
+    ></WorkComponent>
   </div>
 </template>
 

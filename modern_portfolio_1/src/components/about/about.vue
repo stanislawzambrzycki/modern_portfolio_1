@@ -29,7 +29,7 @@
         </div>
         <div class="skill skill-2">
           <h3>Skill Set 2</h3>
-          <h6>CSS Front End Developement</h6>
+          <h6>UX Design</h6>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate
             suscipit quaerat officia non totam, hic earum aliquam error aut
@@ -38,7 +38,7 @@
         </div>
         <div class="skill skill-3">
           <h3>Skill Set 3</h3>
-          <h6>JavaScript Front End Developement</h6>
+          <h6>Toolbox</h6>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate
             suscipit quaerat officia non totam, hic earum aliquam error aut
@@ -48,9 +48,9 @@
       </div>
     </main>
 
-    <footer id="main-footer">Copyright &copy; 2020</footer>
+    <footer id="main-footer">Copyright&copy; 2020</footer>
   </div>
 </template>
 
-<script src="./about.js"/>
-<style src="./about.css"/>
+<script src="./about.js" />
+<style src="./about.css" />

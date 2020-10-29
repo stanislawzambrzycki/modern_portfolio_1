@@ -1,3 +1,6 @@
+br {
+  display: none;
+}
 // Widescreens
 @include mediaXl {
   #home h1 {
@@ -15,7 +18,7 @@
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .contact-data {
+  .contact-item {
     width: 50vw;
   }
 }
@@ -40,21 +43,23 @@
 
 // Tablets & Small Laptops
 @include mediaMd {
+  main {
+    padding: 3rem;
+  }
   #home h1 {
     margin-top: 20vh;
   }
   .lg-heading {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-bottom: 1rem;
   }
   &.sm-heading {
     font-size: 1.1rem;
   }
 
-  // main {
-  //   align-items: center;
-  //   text-align: center;
-  // }
+  .call-to-action {
+    display: none;
+  }
 
   ul.menu-nav,
   div.menu-branding {
@@ -98,28 +103,57 @@
 
     grid-template-columns: 1fr;
   }
-  .contact-data {
-    p {
-      width: 100vw;
-    }
+  .contact-item {
+    width: 100%;
   }
 }
 
 // Smartphones
 @include mediaSm {
+  main {
+    padding: 2rem;
+  }
   #home h1 {
     margin-top: 15vh;
   }
 
   .lg-heading {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
   }
   &.sm-heading {
     font-size: 0.8rem;
   }
 
+  .portrait {
+    display: none;
+  }
+
+  .menu {
+    &-branding {
+      height: 0;
+    }
+
+    &-nav {
+      padding: 15vh 0 0 0;
+      height: 100vh;
+      width: 100%;
+    }
+  }
   .projects {
     grid-template-columns: 1fr;
+  }
+}
+
+@include mediaXs {
+  main {
+    padding: 0.5rem;
+  }
+
+  br {
+    display: block;
+  }
+  .menu .nav-link {
+    font-size: 2.5rem;
   }
 }

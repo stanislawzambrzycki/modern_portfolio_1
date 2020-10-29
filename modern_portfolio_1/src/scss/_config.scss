@@ -52,7 +52,32 @@ $home-image: url(../assets/hex-4270275_1920.jpg);
   }
 }
 
+//Scrollbar
+
+::-webkit-scrollbar {
+  width: 0;
+  scroll-behavior: smooth;
+}
+
+// ::-webkit-scrollbar-track {
+//   background: lighten($primary-color, 22);
+// }
+
+// ::-webkit-scrollbar-thumb {
+//   background: lighten($primary-color, 42);
+// }
+
+// ::-webkit-scrollbar-thumb:hover {
+//   background: lighten($primary-color, 62);
+// }
+
 // Media Query Mixins
+
+@mixin mediaXs {
+  @media screen and (max-width: 400px) {
+    @content;
+  }
+}
 
 @mixin mediaSm {
   @media screen and (max-width: 600px) {
